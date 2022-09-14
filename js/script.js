@@ -61,6 +61,11 @@ const app = new Vue({
             
         ]
     },
+    methods: {
+        markTodo: function(index){
+            this.todos[index].done= !(this.todos[index].done);
+        }
+    }
     
 });
 

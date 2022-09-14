@@ -39,8 +39,11 @@
         </nav>
         <!-- Lista delle cose -->
         <div id="list" class="list p-2">
-          <ol>
-            <li v-for="todo in todos" :class="todo.done === true ? 'strikethroughText' : ''">{{ todo.text }}</li>
+          <ul>
+            <li v-for="(todo, index) in todos" :class="todo.done === true ? 'strikethroughText' : ''">
+              <span class="x" >x</span>
+              <span @click="markTodo(index)">{{ todo.text }}</span> 
+            </li>
           </ol>
         </div>
 

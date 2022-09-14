@@ -2,20 +2,61 @@
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <!-- collegamento al CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <title>Vue To Do List</title>
-  </head>
-  <body>
-    
-  </body>
-  <!-- collegamento a VueJS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.7.10/vue.min.js" 
-    integrity="sha512-H8u5mlZT1FD7MRlnUsODppkKyk+VEiCmncej8yZW1k/wUT90OQon0F9DSf/2Qh+7L/5UHd+xTLrMszjHEZc2BA==" 
+
+<head>
+  <meta charset="utf-8">
+  <!-- bootstrap link (compatto) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+  <!-- bootstrap icon link  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+  <!-- bootstrap js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/js/bootstrap.min.js"
+    integrity="sha512-8Y8eGK92dzouwpROIppwr+0kPauu0qqtnzZZNEF8Pat5tuRNJxJXCkbQfJ0HlUG3y1HB3z18CSKmUo7i2zcPpg=="
     crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+  <!-- collegamento al CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <title>Vue To Do List</title>
+</head>
+
+<body>
+  <div class="container">
+    
+    <div class="window">
+
+      <div id="app">
+
+        <!-- NAV -->
+        <nav class="navbar bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand fw-bold">TO DO LIST - Antonello &copy;</a>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Ricordami di ..." aria-label="Search">
+              <button class="btn btn-dark" type="submit">Inserisci</button>
+            </form>
+          </div>
+        </nav>
+        <!-- Lista delle cose -->
+        <div id="list" class="list p-2">
+          <ol>
+            <li v-for="todo in todos" :class="todo.done === true ? 'strikethroughText' : ''">{{ todo.text }}</li>
+          </ol>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</body>
+
+<!-- collegamento a VueJS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.7.10/vue.min.js"
+  integrity="sha512-H8u5mlZT1FD7MRlnUsODppkKyk+VEiCmncej8yZW1k/wUT90OQon0F9DSf/2Qh+7L/5UHd+xTLrMszjHEZc2BA=="
+  crossorigin="anonymous" referrerpolicy="no-referrer">
   </script>
-  <!-- collegamento a JavaScript -->
-  <script type="text/javascript" src="js/script.js"></script>
+<!-- collegamento a JavaScript -->
+<script type="text/javascript" src="js/script.js"></script>
+
 </html>

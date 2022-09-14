@@ -41,7 +41,7 @@
         <div id="list" class="list p-2">
           <ul>
             <li v-for="(todo, index) in todos" :class="todo.done === true ? 'strikethroughText' : ''">
-              <span class="x" >x</span>
+              <span @click="deleteTodo(index)" class="x" >x</span>
               <span @click="markTodo(index)">{{ todo.text }}</span> 
             </li>
           </ol>

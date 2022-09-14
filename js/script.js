@@ -63,7 +63,14 @@ const app = new Vue({
     },
     methods: {
         markTodo: function(index){
+            console.log("testo cliccato!");
             this.todos[index].done= !(this.todos[index].done);
+        },
+        deleteTodo: function(index){
+            //devo scorrere il todos
+            console.log("x cliccata!");
+            console.log("index of todo:", index);
+            this.todos.splice(index, 1);
         }
     }
     

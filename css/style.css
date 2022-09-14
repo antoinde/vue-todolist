@@ -44,10 +44,13 @@ body {
   padding: 0 8px;
   font-size: 1.2rem;
   font-weight: bold;
-  cursor: pointer;
   border: 1px solid black;
+}
+.x:hover{
+  cursor: pointer;
 }
 ul li{
   margin-top: 8px;
   margin-bottom: 8px;
+  cursor:default;
 }

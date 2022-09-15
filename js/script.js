@@ -72,6 +72,7 @@ const app = new Vue({
             console.log("index of todo:", index);
             this.todos.splice(index, 1);
         }
+        
     }
     
 });

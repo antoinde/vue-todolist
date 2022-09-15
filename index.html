@@ -14,7 +14,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/js/bootstrap.min.js"
     integrity="sha512-8Y8eGK92dzouwpROIppwr+0kPauu0qqtnzZZNEF8Pat5tuRNJxJXCkbQfJ0HlUG3y1HB3z18CSKmUo7i2zcPpg=="
     crossorigin="anonymous" referrerpolicy="no-referrer">
-    </script>
+  </script>
   <!-- collegamento al CSS -->
   <link rel="stylesheet" href="css/style.css">
   <title>Vue To Do List</title>
@@ -31,9 +31,9 @@
         <nav class="navbar bg-light">
           <div class="container-fluid">
             <a class="navbar-brand fw-bold">TO DO LIST - Antonello &copy;</a>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="text" placeholder="Ricordami di ..." aria-label="Search">
-              <button class="btn btn-dark" type="">Aggiungi</button>
+            <form class="d-flex">
+              <input v-model="newTodo" @keyUp.enter class="form-control me-2" type="text" placeholder="Ricordami di ...">
+              <button @click="addTodo"  class="btn btn-dark" type="submit">Aggiungi</button>
             </form>
           </div>
         </nav>
@@ -58,7 +58,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.7.10/vue.min.js"
   integrity="sha512-H8u5mlZT1FD7MRlnUsODppkKyk+VEiCmncej8yZW1k/wUT90OQon0F9DSf/2Qh+7L/5UHd+xTLrMszjHEZc2BA=="
   crossorigin="anonymous" referrerpolicy="no-referrer">
-  </script>
+</script>
 <!-- collegamento a JavaScript -->
 <script type="text/javascript" src="js/script.js"></script>
 

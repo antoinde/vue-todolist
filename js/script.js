@@ -33,6 +33,7 @@ console.log("JavaScript is working properly! =) Let's code!");
 const app = new Vue({
     el: '#app',
     data: {
+        newTodo: '',
         todos:[
             {
                 text: 'Dare cibo al cane',
@@ -71,6 +72,14 @@ const app = new Vue({
             console.log("x cliccata!");
             console.log("index of todo:", index);
             this.todos.splice(index, 1);
+        },
+        addTodo: function(){
+            console.log(this.newTodo);
+            const newTodo = {
+                text: this.newTodo,
+                done: false
+            }
+            this.todos.push(newTodo);
         }
         
     }
